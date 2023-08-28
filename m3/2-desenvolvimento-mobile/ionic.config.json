@@ -1,0 +1,7 @@
+{
+  "name": "bloco-notas",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
