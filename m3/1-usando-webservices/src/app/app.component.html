@@ -1,0 +1,10 @@
+<header>
+  <h1>Notas do {{usuario.nome}}</h1>
+
+  <!-- Navegação de rotas através do atribuo routerLink -->
+  <nav><a routerLink="home">Notas</a> | <a routerLink="form">Adicionar</a> | <a routerLink="sobre">Sobre</a> | <a routerLink="ajuda">Ajuda</a></nav>
+  
+</header>
+
+<!-- conteúdo "roteado" para o router-outlet, ou seja, onde serão exibidos os componentes da rota -->
+<router-outlet></router-outlet>

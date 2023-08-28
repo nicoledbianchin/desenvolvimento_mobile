@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    color: white;
+    background-color: royalblue;
+    padding: 10;
+    margin-bottom: 10px;
+}
+
+a:visited {
+    color: white;
+}
+a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+a {
+    margin: 3;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 5px !important;
+    font-weight: bold;
+}
+
+nav {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

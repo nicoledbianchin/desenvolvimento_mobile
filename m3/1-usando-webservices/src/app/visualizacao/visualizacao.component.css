@@ -1,0 +1,91 @@
+.listaNotas {
+    padding: 3;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 5px;
+    width: 50%;
+}
+
+.nota {
+    margin-top: 10px;
+    padding: 2;
+    border-bottom: 0.75pt solid lightgray;
+    /* border: 1pt solid gray; */
+}
+
+.nota h2 {
+    color: royalblue;
+}
+
+.nota h5 {
+    color: gray;
+}
+
+.removido {
+    color: gray !important;
+    text-decoration: line-through;
+}
+
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* color: royalblue; */
+}
+
+h2, h3, h4, h5 {
+    margin: 0px;
+    margin-bottom: 2px;
+}
+
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+app-detalhe-nota {
+    margin: 10;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: royalblue;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.button2 {
+    padding: 0.3rem 0.5rem;
+    background: lightgray;
+    color: gray;
+    font-size: 0.6rem;
+}
+
+button:hover,
+button:focus {
+    background: royalblue;
+    color: white;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}

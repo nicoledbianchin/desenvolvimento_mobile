@@ -1,0 +1,16 @@
+<div class="conteudo" *ngIf="usuario && usuario.notas">
+    <section class="listaNotas">
+        <article *ngFor="let item of usuario.notas" class="nota" (click)="selecionaNota(item)">
+            <h2 class="{{item.status === 1 ? 'removido': ''}}">{{item.titulo}}</h2>
+            <h5>{{item.modificacao | date}}</h5>
+            <!-- <p>{{item.texto}}</p> -->
+            <button class="button2" *ngIf="item.status === 1" (click)="recuperar(item)">Recuperar</button>
+            <button class="button2" *ngIf="item.status !== 1" (click)="excluir(item)">Excluir</button>
+        </article>
+    </section>
+    <aside class="detalhes">
+        <!-- Inclusão do componente de detalhes, vinculando parâmetro notaSelecionada -->
+        <app-detalhe-nota [nota]="notaSelecionada"></app-detalhe-nota>
+    </aside>
+</div>
+<button (click)="enviar()">Enviar notas</button>
