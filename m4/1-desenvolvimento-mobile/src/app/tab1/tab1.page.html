@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="limpar()">
+      <ion-icon name="trash"></ion-icon>
+    </ion-buttons>
+    
+    <ion-title>
+      Lista de Notas
+    </ion-title>
+
+    <ion-buttons slot="end" (click)="enviar()">
+      <ion-icon name="send"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="notas">
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of notas">
+      <ion-item class="ion-text-wrap {{item.status === 1 ? 'removido': ''}}" (click)="selecionaNota(item)">
+        <ion-label style="display: flex; justify-content: space-between;">
+          <ion-text color="primary">
+            <h2>{{item.titulo}}</h2>
+          </ion-text>
+          <ion-text color="medium">
+            <p>{{item.modificacao | date:"dd/MM/yyyy HH:mm"}}</p>
+          </ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="start" *ngIf="item.status !== 1">
+        <button ion-button class="excluir"  (click)="excluir(item)">
+          Excluir
+        </button>
+      </ion-item-options>
+      <ion-item-options side="start" *ngIf="item.status === 1">
+        <button ion-button class="recuperar"  (click)="recuperar(item)">
+          Recuperar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

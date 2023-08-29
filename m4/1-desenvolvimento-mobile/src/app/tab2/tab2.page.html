@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" (click)="nova()">
+      <ion-label>Nova</ion-label>
+    </ion-buttons>
+    <ion-title>
+      Editar Nota
+    </ion-title>
+    <ion-buttons slot="end" (click)="salvar()">
+      <ion-label>Salvar</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form>
+
+    <ion-card>
+      <ion-card-header>Título</ion-card-header>
+      <ion-card-content>
+        <ion-input [disabled]="nota.status === 1" type="text" [(ngModel)]="nota.titulo" name="titulo"></ion-input>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>Texto</ion-card-header>
+      <ion-card-content>
+        <ion-textarea [disabled]="nota.status === 1" rows="12" [(ngModel)]="nota.texto" name="texto"></ion-textarea>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
