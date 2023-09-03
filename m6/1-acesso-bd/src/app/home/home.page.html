@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-img slot="start" [src]="'../../assets/icon/unisinos_branco.png'"></ion-img>
+    <ion-title>
+      Minha Localização App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form" padding>
+<div style="text-align: center;">
+  <img src="../../assets/location.png" width="80%" alt="Logo de Localização">
+</div>
+<ion-grid>
+  <ion-row>
+    <ion-col align-self-center>
+      <ion-button [routerLink]="['/registro']" expand="block" color="secondary">Registrar</ion-button>
+
+      <div class="divider line one-line" style="text-align: center;">ou</div>
+
+      <div class="already" style="text-align: center;">Já tem registro?</div>
+
+      <ion-button [routerLink]="['/login']" expand="block" color="tertiary">Entrar</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
